@@ -7,51 +7,163 @@
     <title>Pilsētas</title>
 
     <style>
-        td, th {
-            border: solid 1px black;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #101c35, #244c70, #142b45);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1500px;
             text-align: center;
-            width: 150px;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            color: white;
+            text-shadow: 2px 3px 8px black;
+        }
+
+        .description {
+            font-size: 22px;
+            color: #d4e5f5;
+            margin-bottom: 40px;
         }
 
         table {
-            border-spacing: 0px;
+            width: 100%;
             border-collapse: collapse;
+            background: white;
+            color: #172b45;
+            border: 2px solid black;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        th, td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        th {
+            background: #183b5b;
+            color: white;
+            font-size: 25px;
+            height: 75px;
+        }
+
+        td {
+            font-size: 25px;
+            font-weight: bold;
+            height: 230px;
+        }
+
+        td img {
+            width: 350px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        td img:hover {
+            transform: scale(1.05);
+        }
+
+        tr:nth-child(even) {
+            background: #e8f0f8;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #c8d9e9;
+            font-size: 17px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            td img {
+                width: 100%;
+                height: auto;
+            }
+
+            td, th {
+                padding: 10px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Manas 3 pilsētas</h1>
+    <div class="container">
 
-    <table>
-        <tr>
-            <th>Pilsētas nosaukums</th>
-            <th>Attēls</th>
-        </tr>
+        <h1>🌍 Skaistākās pasaules pilsētas</h1>
 
-        <tr>
-            <td>Rīga</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=300" alt="Rīga" width="150">
-            </td>
-        </tr>
+        <p class="description">
+            Trīs interesantas pilsētas, kuras noteikti ir vērts apmeklēt!
+        </p>
 
-        <tr>
-            <td>Parīze</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300" alt="Parīze" width="150">
-            </td>
-        </tr>
+        <table>
+            <tr>
+                <th>Pilsētas nosaukums</th>
+                <th>Pilsētas attēls</th>
+            </tr>
 
-        <tr>
-            <td>Londona</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=300" alt="Londona" width="150">
-            </td>
-        </tr>
+            <tr>
+                <td>Rīga 🇱🇻</td>
+                <td>
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+                    alt="Rīga" width="150">
+                </td>
+            </tr>
 
-    </table>
+            <tr>
+                <td>Parīze 🇫🇷</td>
+                <td>
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a"
+                    alt="Parīze" width="150">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Londona 🇬🇧</td>
+                <td>
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad"
+                    alt="Londona" width="150">
+                </td>
+            </tr>
+
+        </table>
+
+        <footer>
+            © 2026 | Mans HTML projekts – Pilsētas
+        </footer>
+
+    </div>
 
 </body>
 </html>
